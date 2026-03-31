@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import './App.css'
 
+// test
 import UserProfile from './components/UserProfile'
 import MovieCard from './components/MovieCard';
 
