@@ -23,7 +23,7 @@ function Contact() {
                 placeholder="Entrez subject"
                 />
 
-                <label>Message</label>
+                <label>Message Important</label>
                 <textarea 
                 rows="5"
                 placeholder="Entrez message"
