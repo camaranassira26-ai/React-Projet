@@ -16,6 +16,17 @@ function NavBar() {
                 >
                     About
                 </NavLink>
+                <br/>
+                <NavLink
+                    to="/contact"
+                >
+                    Contact
+                </NavLink>
+                
+                
+                
+                
+                
              </div>
         </nav>
     );
