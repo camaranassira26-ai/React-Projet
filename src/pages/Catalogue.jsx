@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import ProductCard from '../components/ProductCard';
-import styles from './Home.module.css';
+import styles from './Catalogue.module.css';
 
-function Home() {
+function Catalogue() {
+    const [filter, setFilter] = useState("Robes");
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
@@ -38,12 +39,23 @@ function Home() {
         ]);
     }, []);
 
+    const filteredProducts = products.filter(p => p.category === filter);
+
     return (
         <div className={styles.container}>
-            <h1 className={styles.title}>Bienvenue sur StreetWear 🔥</h1>
-            <p className={styles.subtitle}>Les meilleures sneakers et robes du moment</p>
+            <h1 className={styles.title}>Catalogue</h1>
+            <div className={styles.filters}>
+                <button
+                    onClick={() => setFilter("Chaussures")}
+                    className={filter === "Chaussures" ? styles.active : styles.button}
+                >Chaussures</button>
+                <button
+                    onClick={() => setFilter("Robes")}
+                    className={filter === "Robes" ? styles.active : styles.button}
+                >Robes</button>
+            </div>
             <div className={styles.grid}>
-                {products.map((product) => (
+                {filteredProducts.map((product) => (
                     <ProductCard
                         key={product.id}
                         name={product.name}
@@ -57,4 +69,4 @@ function Home() {
     );
 }
 
-export default Home;
+export default Catalogue;

@@ -1,0 +1,22 @@
+.container {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.title {
+    font-size: 36px;
+    font-family: Georgia, serif;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: gray;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
